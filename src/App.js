@@ -1,10 +1,11 @@
 import { BrowswerRouter, Routes, Route } from 'react-router-dom';
 import { Box } from '@mui/material';
+import { Feed, Navbar, VideoDetail, ChannelDetail, SearchFeed } from './Components';
 
 const App = () => (
     <BrowswerRouter>
         <Box sx={{ backgroundColor: '#000'}}>
-            <NavBar />
+            <Navbar />
             <Routes>
                 <Route path='/' exact element={<Feed />} />;
                 <Route path='/video/:id' element={ <VideoDetail /> }/>;
