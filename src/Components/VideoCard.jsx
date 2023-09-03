@@ -11,8 +11,9 @@ const VideoCard = ({ video: { id: {
     <Card sx={{ width: { md: '320px', xs: '100%' }, 
     boxShadow: 'none', borderRadius: 0}}>
         <Link to={videoId ? `/video/${videoId}`: demoVideoUrl}>
-            <CardMedia 
-                image={snippet?.thumbnails?.high?.url}
+            <CardMedia //It is an issue with the api since it keeps putting a => in the url, either get new
+            // api or use regex to reformat the api
+                image={snippet?.thumbnails?.high?.url || demoThumbnailUrl}
                 alt={snippet?.title}
                 sx={{ width: 358, height: 180 }}
                 />

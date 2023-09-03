@@ -11,7 +11,6 @@ const ChannelDetail = () => {
 
   const { id } = useParams();
 
-  console.log(channelDetail)
 
   useEffect(() => {
     fetchFromAPI(`channels?part=snippet&id=${id}`)
